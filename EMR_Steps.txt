@@ -1,0 +1,7 @@
+When running a EMR:
+aprd:
+    1. sudo su - data2_etl
+    2. hive
+    3. your query.
+
+prd:

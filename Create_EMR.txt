@@ -1,10 +1,10 @@
 Creating an EMR:
 
 On aprd:
-1. Check which AWS account should I use.
-2. 
-
-sudo su - data2_etl
-/data/meghdoot-reloaded/current/run_meghdoot_f360.sh -c CREATE_EMR -g falcon -p f360_exploration_2 -e aprd
-
-when running on aprd use sudo su - hadooop
+1. go to: https://devportal.intuit.com/app/dp/awsAccounts And see you Cloud Accounts.
+2. go to 'Link Analysis Prod' and enter as 'Developer' role.
+3. go to 'EMR' section and look for 'meghdoot-tidal-agent-aprd' instance.
+4. connect o this instance and run the next commands:
+    sudo su - data2_etl
+    /data/meghdoot-reloaded/current/run_meghdoot_f360.sh -c CREATE_EMR -g falcon -p 'cluster_name' -e aprd
+5. wait until finished.
