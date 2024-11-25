@@ -8,3 +8,7 @@ On aprd:
     sudo su - data2_etl
     /data/meghdoot-reloaded/current/run_meghdoot_f360.sh -c CREATE_EMR -g falcon -p 'cluster_name' -e aprd
 5. wait until finished.
+
+
+you can find the cluster_name here:
+https://github.intuit.com/data-fraud-360/fraud-360-meghdoot-config/blob/master/F360Meghdoot-aprd.yml
