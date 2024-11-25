@@ -1,7 +1,8 @@
 When running a EMR:
-aprd:
-    1. sudo su - data2_etl
+aprd: (using SSM)
+    1. sudo su - hadoop
     2. hive
+        for using spark sql instead of hive run: spark-sql -S
     3. your query.
 
-prd:
+  how to use screen -r
