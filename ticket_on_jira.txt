@@ -5,4 +5,6 @@ Steps on jira:
 4. VERIFY
 5. DONE
 
-When closing a ticket,
+When closing a ticket:
+1. Put CCB-READY and PRD-'Current_date' labels.
+2. Make sure CCB-Approved in tagged on Labels - Tagged by yaron/Zvi.
