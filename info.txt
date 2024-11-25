@@ -1,3 +1,0 @@
-For uploading an EMR run:
-sudo su - data2_etl
-/data/meghdoot-reloaded/current/run_meghdoot_f360.sh -c CREATE_EMR -g falcon -p f360_exploration_2 -e aprd
