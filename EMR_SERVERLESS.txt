@@ -6,3 +6,8 @@ Run script on EMR, when i want to implemet or check the changes i have uploaded 
 
 Running command on bpp: /data/meghdoot-reloaded/current/run_meghdoot_f360.sh  -c ADD_STEP -g falcon -p f360_stable_00 -e aprd -u quicketl_job -a "--step.name=prc_third_party_applications" -o "'-b','SBPD-8057','-p','fraud_360_stable','-c','prc/qbo_third_party_app_connetion/prc_third_party_applications'"
 ommand 
+
+-C Commands:
+1. CREATE_EMR: create a new EMR
+2. ADD_STEP: add a step to an existing EMR
+3. EMR_SERVERLESS: Run step on serverless EMR
