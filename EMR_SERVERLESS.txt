@@ -1,0 +1,8 @@
+how to run EMR SERVERLESS:
+
+Upload EMR on aprd: /data/meghdoot-reloaded/current/run_meghdoot_f360.sh -c CREATE_EMR -g falcon -p f360_stable_00 -e aprd
+
+Run script on EMR, when i want to implemet or check the changes i have uploaded into aprd: /data/meghdoot-reloaded/current/run_meghdoot_f360.sh  -c ADD_STEP -g falcon -p f360_stable_00 -e aprd -u quicketl_job -a "--step.name=prc_third_party_applications" -o "'-b','SBPD-8057','-p','fraud_360_stable','-c','prc/qbo_third_party_app_connetion/prc_third_party_applications'"
+
+Running command on bpp: /data/meghdoot-reloaded/current/run_meghdoot_f360.sh  -c ADD_STEP -g falcon -p f360_stable_00 -e aprd -u quicketl_job -a "--step.name=prc_third_party_applications" -o "'-b','SBPD-8057','-p','fraud_360_stable','-c','prc/qbo_third_party_app_connetion/prc_third_party_applications'"
+ommand 
