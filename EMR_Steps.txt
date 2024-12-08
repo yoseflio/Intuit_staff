@@ -1,4 +1,4 @@
-When running a EMR:
+How to use EMR session:
 aprd: (using SSM)
     1. sudo su - hadoop
     2. hive
@@ -6,3 +6,14 @@ aprd: (using SSM)
     3. your query.
 
   how to use screen -r
+
+
+Run step on EMR:
+/data/meghdoot-reloaded/current/run_meghdoot_f360.sh \
+-g falcon \
+-p f360_exploration_2 \
+-e aprd \
+-c ADD_STEP \
+-u quicketl_job \
+-a "--step.name=run_qbn_roles_lookup_table" \
+-o "'-b','SBPD-10081','-c','gdb_dwh_v5/pipelines/gdb_qbnrole_lookup','-p','gdb_dwh'"
