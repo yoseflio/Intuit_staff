@@ -1,0 +1,13 @@
+How to run EMR Serverless:
+1. Connect to meghdoot-tidal-agent-aprd.
+2. run command 'sudo su - data2_rpt'
+3. run the credentials:
+  /data/meghdoot-reloaded/current/run_meghdoot_f360.sh
+  -c EMR_SERVERLESS \
+  -e aprd \ (enviroment)
+  -g emrserverless \
+  -p generic \ (application)
+  -u quicketl_job \
+  -a "--job.name=run_qbn_roles_lookup_table" \
+  -o "'-p','gdb_dwh','-c','gdb_dwh_v5/pipelines/gdb_qbnrole_lookup','-b','SBPD-10081'"
+4. go to the application on the EMR serverless and look for the relevant step.
