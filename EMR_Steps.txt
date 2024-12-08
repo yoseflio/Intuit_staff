@@ -5,15 +5,19 @@ aprd: (using SSM)
         for using spark sql instead of hive run: spark-sql -S
     3. your query.
 
-  how to use screen -r
+how to use screen -r:
 
 
 Run step on EMR:
-/data/meghdoot-reloaded/current/run_meghdoot_f360.sh \
--g falcon \
--p f360_exploration_2 \
--e aprd \
--c ADD_STEP \
--u quicketl_job \
--a "--step.name=run_qbn_roles_lookup_table" \
--o "'-b','SBPD-10081','-c','gdb_dwh_v5/pipelines/gdb_qbnrole_lookup','-p','gdb_dwh'"
+
+1. Create an EMR according to the regular steps.
+2. run the next command on EC2 (Meghdoot Tidal), the command connects to git repository according to the credentials listed and run the script.
+  /data/meghdoot-reloaded/current/run_meghdoot_f360.sh \
+  -g falcon \
+  -p f360_exploration_2 \
+  -e aprd \
+  -c ADD_STEP \
+  -u quicketl_job \
+  -a "--step.name=run_qbn_roles_lookup_table" \
+  -o "'-b','SBPD-10081','-c','gdb_dwh_v5/pipelines/gdb_qbnrole_lookup','-p','gdb_dwh'"
+3. go to the exploration on EMR and search for the stdout on Steps section.
