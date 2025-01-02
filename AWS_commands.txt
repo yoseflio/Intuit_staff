@@ -1,0 +1,26 @@
+All the above refers to f360_exploration_2
+
+
+1. Create EMR on aprd:
+    /data/meghdoot-reloaded/current/run_meghdoot_f360.sh -c CREATE_EMR -g falcon -p f360_mc_01 -e aprd
+
+
+2. boostrapping EMR on aprd from specific branch:
+    /data/meghdoot-reloaded/current/run_meghdoot_f360.sh \
+    -g falcon \
+    -p f360_exploration_2 \
+    -e aprd \
+    -c ADD_STEP \
+    -u quicketl_job \
+    -a "--step.name=one_time_organization_account_v2_copy" \
+    -o "'-b','SBPD-5888','-c','adhoc/one_time_organization_account_v2','-p','fraud_360_src'"
+
+
+3. Boostraping EMR serverless on aprd from specific barnch:
+    /data/meghdoot-reloaded/current/run_meghdoot_f360.sh -c EMR_SERVERLESS \
+    -e aprd \
+    -g emrserverless \
+    -p generic \
+    -u quicketl_job \
+    -a "--job.name=emrserverless_gdb_persona_to_email" \
+    -o "'-p','gdb_dwh','-c','gdb_dwh_v5/pipelines/gdb_persona_to_email','-b','SBPD-6843'"
